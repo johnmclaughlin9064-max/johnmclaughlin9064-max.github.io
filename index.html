@@ -5,13 +5,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="hal.png">
-        <title> john </title>
+        <link rel="icon" type="image/png" href="images/hal.png">
+        <link rel="stylesheet" href="style.css">
+        <title> johns website </title>
     </head>
 
     <body>
         <header style="background-color: black;">
-            <h1 style="color: white;"> JOHN MCLAUGHLIN </h1>
+            <h1> JOHN MCLAUGHLIN </h1>
+            <a href="">Home</a>
             <a href="">Resume</a>
             <a href="">Projects</a>
             <hr>
@@ -19,45 +21,33 @@
 
         <main>
 
-            <p>
-                <mark style="background-color: seagreen;">John Mclaughlin's website</mark>
-            </p>
 
             <hr>
+            <br>
 
-            <pre>
-                Tell me, O muse, of that ingenious hero who travelled far and wide after
-                he had sacked the famous town of Troy. Many cities did he visit,
-                and many were the nations with whose manners and customs he was acquainted;
-                moreover he suffered much by sea while trying to save his own life and bring
-                his men safely home; but do what he might he could not save his men, for
-                they perished through their own sheer folly in eating the cattle of the
-                Sun-god Hyperion; so the god prevented them from ever reaching home.
-                Tell me, too, about all these things, O daughter of Jove, from whatsoever
-                source you may know them.
-            </pre>
+            <div class="quote-container">
+                <p id="quote-text" class="quote-text"></p>
+                <p id="quote-author" class="quote-author"></p>
+            </div>
 
             <br>
 
             <!-- HYPERLINKS -->
+            <!--
 
-            <h3> letterboxed </h3>
+
+            <h3> letterboxd </h3>
             <a href="https://letterboxd.com/johnmcl9064/" target="_blank" title="goes to letterboxed profile">
                 profile
             </a>
+            -->
+            <hr>
 
-            <br>
-
-            <br>
-
-            <a href="https://en.wikipedia.org/wiki/Hum_(band)" target="_blank">
-                <img src="hum1.png" height="300">
-            </a>
-
-            <br>
-
+            <div class="image-container">
+                <img src=images/WW1.jpg class="album-cover">
+            </div>
             <audio controls>
-                <source src="IV.mp3" type="audio/mpeg">
+                <source src="songs/IV.mp3" type="audio/mpeg">
             </audio>
 
         </main>
@@ -67,5 +57,116 @@
             &copy;
             <small><a href="mailto:johnmclaughlin9064@gmail.com" style="color: white;">johnmclaughlin9064@gmail.com</a></small>
         </footer>
+
+        <script>
+            // List of quotes with text and author
+            const quotes = [
+                {
+                    text: "It is the soldier who must suffer and bear the deepest wounds and scars of war",
+                    author: "— Douglas MacArthur"
+                },
+                {
+                    text: "You can only fight the way you practice",
+                    author: "— Miyamoto Musashi"
+                },
+                {
+                    text: "Never confuse a single defeat with a final defeat",
+                    author: "— F. Scott Fitzgerald"
+                },
+                {
+                    text: "The way of the warrior is resolute acceptance of death",
+                    author: "— Miyamoto Musashi"
+                },
+                {
+                    text: "It is victory at all costs, victory in spite of all terror, victory, however long and hard the road may be",
+                    author: "— Winston S. Churchill"
+                },
+                {
+                    text: "At the end of the day, we can endure much more than we think we can",
+                    author: "— Frida Kahlo"
+                },
+                {
+                    text: "No soldier outlives a thousand chances. But every soldier believes in Chance and trusts his luck",
+                    author: "— Erich Maria Remarque"
+                },
+                {
+                    text: "The two most powerful warriors are patience and time",
+                    author: "— Leo Tolstoy"
+                },
+                {
+                    text: "For a warrior is not enough to win a war; it is more important to organize the peace",
+                    author: "— Aristotle"
+                },
+                {
+                    text: "He who conquers himself is the mightiest warrior",
+                    author: "— Confucius"
+                },
+                {
+                    text: "We sleep safe in our beds because rough men stand ready in the night to visit violence on those who would do us harm",
+                    author: "— George Orwell"
+                },
+                {
+                    text: "So long as there are men, there will be wars",
+                    author: "— Albert Einstein"
+                },
+                {
+                    text: "A warrior who is prepared to fight must also prepare to die",
+                    author: "— Sun Tzu"
+                },
+                {
+                    text: "In modern warfare there are no victors; there are only survivors",
+                    author: "— Lyndon B. Johnson"
+                },
+                {
+                    text: "Braver is he who, knowing that he would have to sacrifice ninety-five as against five of the enemy, faces death",
+                    author: "— Mahatma Gandhi"
+                },
+                {
+                    text: "It takes your enemy and your friend, working together, to hurt you to the heart",
+                    author: "— Mark Twain"
+                },
+                {
+                    text: "Nationalism is an infantile disease. It is the measles of mankind",
+                    author: "— Albert Einstein"
+                },
+                {
+                    text: "Ask not what your country can do for you, but what you can do for your country",
+                    author: "— John F. Kennedy"
+                },
+                {
+                    text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                    author: "— Winston Churchill"
+                },
+                {
+                    text: "You must not fight too often with one enemy, or you will teach him all your art of war.",
+                    author: "— Napoleon Bonaparte"
+                },
+                {
+                    text: "Courage, above all things, is the first quality of a warrior.",
+                    author: "— Karl von Clausewitz"
+                },
+                {
+                    text: "All war is a symptom of man's failure as a thinking animal.",
+                    author: "— John Steinbeck"
+                },
+                {
+                    text: "No battle plan survives first contact with the enemy.",
+                    author: "— Helmuth von Moltke"
+                },
+                {
+                    text: "A good plan violently executed now is better than a perfect plan executed next week.",
+                    author: "— George. S. Patton"
+                },
+
+            ];
+
+            // Pick a random index
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+
+            // Insert quote and author into the page
+            document.getElementById("quote-text").textContent = selectedQuote.text;
+            document.getElementById("quote-author").textContent = selectedQuote.author;
+        </script>
     </body>
 </html>
